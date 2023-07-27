@@ -42,6 +42,18 @@ body {
   border-top-right-radius: 20px;
 }
 
+.lower-data {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 .upper-data img {
   position: absolute;
   top: 0;
