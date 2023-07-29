@@ -1,6 +1,6 @@
 :root {
-  --blue-1: #3C429E;
-  --blue-2: #4C52AD;
+  --blue-1: #1565fa;
+  --blue-2: #4c89fc;
   --yellow-1: #FAC742;
   --white: #FFF;
   --grey-1: #EDEDED;
@@ -147,12 +147,11 @@ body {
 }
 
 .search input {
-  background-color: var(--shadow-light);
   outline: none;
   border: none;
   border-radius: 20px;
   padding: 1em;
-  color: var(--grey-1);
+  color: var(--grey-2);
   font-size: 0.8em;
   text-align: center;
 }
