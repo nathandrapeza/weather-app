@@ -12,18 +12,22 @@
 <div class="container" *ngIf="weatherData">
   <div class="upper-data">
     <img
-      src="../assets/hot-weather.jpg"
-      *ngIf="14 > 15"
-      alt="Hot weather image.">
+      src="../assets/day.jpg"
+      *ngIf="background == 'night'"
+      alt="Hot weather image."
+    >
     <img
-      src="../assets/cold-weather.jpg"
-      *ngIf="15 >= 14"
-      alt="Cold weather image.">
+      src="../assets/day.jpg"
+      *ngIf="background == 'day'"
+      alt="Hot weather image."
+    >
 
     <div class="weather-data">
-      <div class="location">{{ weatherData.location.name }}, {{weatherData.location.region}}</div>
+      <div class="location">{{ weatherData.location.name }}</div>
+      <div class="info-other">({{ weatherData.location.region }}, {{weatherData.location.country}})</div>
       <div class="temperature">{{ weatherData.current.temp_c | number: '1.0-0'}}°C</div>
-      <div class="temperature-other">feels like {{ weatherData.current.feelslike_c}}°C</div>
+      <div class="info-other">feels like {{ weatherData.current.feelslike_c}}°C</div>
+      <div class="info-other">{{ weatherData.location.localtime}}</div>
     </div>
   </div>
   <div class="lower-data">

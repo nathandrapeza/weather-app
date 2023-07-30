@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   weatherData?: WeatherData;
   cityName: string = "Edmonton";
+  background?: string;
 
   constructor(private weatherService: WeatherService) {
 
@@ -20,9 +21,18 @@ export class AppComponent implements OnInit {
     this.cityName="";
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.getWeatherData(this.cityName);
     this.cityName="";
+  }
+
+  determineBackground(): string {
+    const hour: number = Number(this.weatherData?.location.localtime.substring(11,12));
+    if (hour < 7 && hour > 22) {
+      return "night";
+    } else {
+      return "day";
+    }
   }
 
   private getWeatherData(cityName: string) {
@@ -30,6 +40,7 @@ export class AppComponent implements OnInit {
     .subscribe({
       next: (response) => {
         this.weatherData = response;
+        this.background = this.determineBackground();
         console.log(response);
       }
     })

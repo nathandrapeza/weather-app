@@ -88,10 +88,10 @@ body {
   font-weight: 900;
 }
 
-.temperature-other {
+.info-other {
   color: var(--grey-1);
   text-align: center;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 .more-info-label {
