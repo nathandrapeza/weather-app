@@ -2,7 +2,7 @@
   <form #form="ngForm" (submit)="onSubmit()">
     <input
       type="text"
-      placeholder="Search city"
+      placeholder="Search City"
       name="city"
       [(ngModel)]="cityName"
     />
@@ -13,13 +13,13 @@
   <div class="upper-data">
     <img
       src="../assets/day.jpg"
-      *ngIf="background == 'night'"
-      alt="Hot weather image."
+      *ngIf="background == 'day'"
+      alt="Daytime image."
     >
     <img
-      src="../assets/day.jpg"
-      *ngIf="background == 'day'"
-      alt="Hot weather image."
+      src="../assets/night.jpg"
+      *ngIf="background == 'night'"
+      alt="Nightime image."
     >
 
     <div class="weather-data">

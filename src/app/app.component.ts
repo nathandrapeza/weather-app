@@ -27,8 +27,12 @@ export class AppComponent implements OnInit {
   }
 
   determineBackground(): string {
-    const hour: number = Number(this.weatherData?.location.localtime.substring(11,12));
-    if (hour < 7 && hour > 22) {
+    const dateString: any = this.weatherData?.location.localtime;
+    const dateObj = new Date(dateString);
+    const hours = dateObj.getHours();
+
+    console.log("HOURS: ", hours)
+    if (hours < 7) {
       return "night";
     } else {
       return "day";
@@ -41,6 +45,7 @@ export class AppComponent implements OnInit {
       next: (response) => {
         this.weatherData = response;
         this.background = this.determineBackground();
+        console.log("BACKGROUND: ", this.background)
         console.log(response);
       }
     })
