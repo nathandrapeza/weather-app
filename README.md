@@ -1,6 +1,6 @@
 # WeatherApp
 
-![Demonstration of WeatherApp Use.]([https://raw.githubusercontent.com/nathandrapeza/weather-app/main/demo.gif])
+<img src="https://raw.githubusercontent.com/nathandrapeza/weather-app/main/demo.gif" height="500" alt="Demonstration of WeatherApp functionality."/>
 
 ## Development server
 
